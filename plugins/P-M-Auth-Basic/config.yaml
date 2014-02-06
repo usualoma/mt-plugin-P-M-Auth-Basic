@@ -1,5 +1,5 @@
 name: P-M-Auth-Basic
-version: 1.00
+version: 1.01
 description: This plugin applies Plack::Middleware::Auth::Basic to the Movable Type.
 
 plack_middlewares:
@@ -14,6 +14,7 @@ plack_middlewares:
                   name         => $username,
                   api_password => $password,
                   type         => MT::Author::AUTHOR(),
+                  status       => MT::Author::ACTIVE(),
               });
 
               $author;
